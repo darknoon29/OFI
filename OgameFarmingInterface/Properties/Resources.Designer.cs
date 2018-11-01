@@ -311,27 +311,6 @@ namespace OgameFarmingInterface.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &lt;html&gt;
-        ///&lt;head&gt;
-        ///&lt;SCRIPT language=Javascript&gt; 
-        ///function gotoavertissement() { 
-        ///location.href = &quot;#avertissement&quot; 
-        ///} 
-        ///&lt;/SCRIPT&gt; 
-        ///&lt;/head&gt;
-        ///&lt;body leftmargin=&quot;0&quot; topmargin=&quot;0&quot; rightmargin=&quot;0&quot; bgcolor=&quot;white&quot;&gt;
-        ///&lt;table width=&quot;100%&quot; border=&quot;0&quot; bgcolor=&quot;red&quot;&gt;&lt;tr style=&quot;cursor:hand&quot; onclick=&quot;gotoavertissement()&quot;&gt;&lt;td align=&quot;center&quot; &gt;&lt;font color=&quot;#990000&quot;&gt;Avertissement a lire en premier&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-        ///&lt;br /&gt;
-        ///&lt;div style=&quot;margin:20&quot;&gt;
-        ///&lt;TABLE BORDER=0 CELLPADDING=0 BGCOLOR=&quot;#ECE9D8&quot;&gt;&lt;TR BGCOLOR=&quot;#99ff00&quot;&gt;&lt; [le reste de la chaîne a été tronqué]&quot;;.
-        /// </summary>
-        internal static string PageHome {
-            get {
-                return ResourceManager.GetString("PageHome", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Precedant {

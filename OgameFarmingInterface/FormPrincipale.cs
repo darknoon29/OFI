@@ -65,7 +65,6 @@ namespace OgameFarmingInterface
             initialiseLUniversConnu() ;
             initialiseRechercheUnivers() ;
             initialiseSimulation() ;
-            initialiseLeNavigateur() ;
             initialiseLiaisonServeur() ;
             AnalysePressePapier = true ;
             //anaylserLePressePapier() ;
@@ -3858,95 +3857,7 @@ namespace OgameFarmingInterface
         }
 
         #endregion
-
-        #region gestion du navigateur
-
-        private void initialiseLeNavigateur()
-        {
-            textBoxBarreDAdresse.Text = "home" ;
-            afficherLaPageDeDemarrage() ;
-            buttonPrecedant.Enabled = webBrowser.CanGoBack ;
-            buttonSuivant.Enabled = webBrowser.CanGoForward ;
-        }
-
-        private void afficherLaPageDeDemarrage()
-        {
-            //webBrowser.Navigate( "http://ogame.insomniacs.free.fr/" ) ;
-            webBrowser.DocumentText = OgameFarmingInterface.Properties.Resources.PageHome ;
-        }
-
-        private void afficherLaPageDArret()
-        {
-        }
-
-        private void tabPageNavigateur_Click( object sender, EventArgs e )
-        {
-            
-        }
-
-        private void buttonHome_Click( object sender, EventArgs e )
-        {
-            textBoxBarreDAdresse.Text = "home" ;
-            afficherLaPageDeDemarrage() ;
-        }
-
-        private void buttonPrecedant_Click( object sender, EventArgs e )
-        {
-            webBrowser.GoBack() ;
-        }
-
-        private void buttonSuivant_Click( object sender, EventArgs e )
-        {
-            webBrowser.GoForward() ;
-        }
-
-        private void buttonArreter_Click( object sender, EventArgs e )
-        {
-            webBrowser.Stop() ;
-            afficherLaPageDArret() ;
-        }
-
-        private void buttonActualiser_Click( object sender, EventArgs e )
-        {
-            webBrowser.Refresh() ;
-        }
-
-        private void textBoxBarreDAdresse_KeyDown( object sender, KeyEventArgs e )
-        {
-            buttonGO_Click(null, null) ;
-        }
-
-        private void buttonGO_Click( object sender, EventArgs e )
-        {
-            if ( textBoxBarreDAdresse.Text == "home" )
-            {
-                afficherLaPageDeDemarrage() ;
-            }
-            else
-            {
-                webBrowser.Navigate( textBoxBarreDAdresse.Text ) ;
-            }
-        }
-
-        private void webBrowser_Navigated( object sender, WebBrowserNavigatedEventArgs e )
-        {
-            if ( webBrowser.Url.OriginalString != "about:blank" )
-            {
-                if ( webBrowser.Url.OriginalString == "http://ogame.insomniacs.free.fr/" )
-                {
-                    textBoxBarreDAdresse.Text = "home" ;
-                }
-                else
-                {
-                    textBoxBarreDAdresse.Text = webBrowser.Url.OriginalString ;
-                }
-            }
-            buttonPrecedant.Enabled = webBrowser.CanGoBack ;
-            buttonSuivant.Enabled = webBrowser.CanGoForward ;
-        }
-
-        #endregion
-
+               
         #region gestion de la mise à jour automatique
 
 #if UNIVER_50
